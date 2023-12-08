@@ -19,5 +19,5 @@ module.exports = override(
   },
   addWebpackAlias({
     ['@']: path.resolve(__dirname, 'src')
-  })
+  }),
 );

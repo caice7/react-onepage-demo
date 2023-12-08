@@ -12,7 +12,7 @@ export const ipconfig = 'http://192.168.1.109:6070';
 // export const ipconfig = 'http://192.168.1.111:6070';
 
 /** 异常处理 */
-export const dealCatch = (error) => {
+export const dealCatch = (error: any) => {
   const code = error?.code;
   if (!code) {
     msg.error('请求失败');
@@ -33,7 +33,7 @@ export const getHeaders = () => {
   }
 }
 export const ajax = {
-  post: function (api, params, type) {
+  post: function (api: string, params: object, type?: string) {
     return fetch(ipconfig + api, {
       method: type || 'post',
       body: JSON.stringify(params),
@@ -49,7 +49,7 @@ export const ajax = {
       return response.json();
     }).catch(e => dealCatch(e));
   },
-  get: function (api, type) {
+  get: function (api: string, type?: string) {
     return fetch(ipconfig + api, {
       method: type || 'get',
       headers: getHeaders(),
@@ -61,7 +61,7 @@ export const ajax = {
       return response.json();
     }).catch(e => dealCatch(e));
   },
-  getImg: function (api) {
+  getImg: function (api: string) {
     return fetch(ipconfig + api, {
       method: 'get',
       headers: getHeaders(),
@@ -73,19 +73,19 @@ export const ajax = {
       return response.blob();
     }).catch(e => dealCatch(e));
   },
-  patch: function (api, params) {
+  patch: function (api: string, params: object) {
     return ajax.post(api, params, 'PATCH');
   },
-  put: function (api, params) {
+  put: function (api: string, params: object) {
     return ajax.post(api, params, 'PUT');
   },
-  delete: function (api) {
+  delete: function (api: string) {
     return ajax.get(api, 'DELETE');
   },
-  deletes: function (api, params) {
+  deletes: function (api: string, params: object) {
     return ajax.post(api, params, 'DELETE');
   },
-  export: function (api, params) {
+  export: function (api: string, params: object) {
     return fetch(ipconfig + api, {
       method: 'post',
       body: JSON.stringify(params),
