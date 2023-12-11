@@ -8,8 +8,8 @@ import { msg } from '@/tools';
 
 // 接口 
 // export const ipconfig = '/v1';
-export const ipconfig = 'http://192.168.1.109:6070';
-// export const ipconfig = 'http://192.168.1.111:6070';
+// export const ipconfig = 'http://192.168.1.109:6070';
+export const ipconfig = 'http://192.168.1.111:6070';
 
 /** 异常处理 */
 export const dealCatch = (error: any) => {

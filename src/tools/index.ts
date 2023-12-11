@@ -1,5 +1,11 @@
 import { message } from "antd";
 
+/*
+ * @Description 工具类
+ * @Author shenyangguang
+ * @Date 2023/12/08
+ */
+
 /** 消息提示 */
 export const msg = {
   warning: (c: string | undefined, t?: number) => message.warning(c, t || 3),

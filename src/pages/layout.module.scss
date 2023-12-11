@@ -1,0 +1,41 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top {
+  height: 55px;
+  min-height: 55px;
+}
+
+.bottom {
+  display: flex;
+  flex: 1;
+}
+
+.menu {
+  height: calc(100vh - 55px);
+  overflow: hidden auto;
+  width: 260px;
+}
+
+.menu::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #0155a3;
+  background: #002950;
+}
+
+.main {
+  flex: 1;
+  overflow: hidden;
+}
+
+.main>div {
+  height: 100%;
+}

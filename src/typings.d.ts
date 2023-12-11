@@ -22,4 +22,7 @@ declare const REACT_APP_ENV: 'test' | 'dev' | 'pre' | false;
 interface Window {
   /** 图片服务地址 */
   imgUrl: string;
+  /** 阿里验证 */
+  AWSC: any;
+  nvc: any;
 }

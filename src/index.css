@@ -5,39 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
-@media screen and (min-width: 1280px) {
-  html {
-    font-size: 12px !important;
-    /*no*/
-  }
+.dark-bg {
+  background-color: #001529;
+  color: #dfdfdf;
 }
 
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: 14px !important;
-    /*no*/
-  }
+.ant-tabs-tab {
+  border-radius: 0 !important;
 }
 
-@media screen and (min-width: 1920px) {
-  html {
-    font-size: 16px !important;
-    /*no*/
-  }
-}
-
-@media screen and (min-width: 2500px) {
-  html {
-    font-size: 30px !important;
-    /*no*/
-  }
-}
-
-@media screen and (min-width: 3000px) {
-  html {
-    font-size: 40px !important;
-    /*no*/
-  }
+.ant-menu-item-selected {
+  background-color: transparent !important;
 }
