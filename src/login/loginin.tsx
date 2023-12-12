@@ -26,10 +26,7 @@ const LoginIn: React.FC = () => {
         if (res.code === 200) {
           localStorage.setItem("admin-token", res.data['jbt-token']);
           msg.success('登录成功！');
-          const urlParams = new URL(window.location.href).searchParams;
-          const url = urlParams.get('redirect');
-          window.location.href = url || '/';
-          return;
+          window.location.reload();
         } else {
           // 如果失败去设置用户错误信息
           msg.error(res.msg);
